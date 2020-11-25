@@ -1,0 +1,25 @@
+body {
+    display: flex;
+    justify-content: center;
+}
+
+.login {
+    padding: 50px;
+    background-color: gray;
+    border-radius: 10px;
+    border: 1px solid black;
+}
+
+form {
+    display: inline-flex;
+    align-items: center;
+    flex-direction: column;
+
+
+}
+
+.form-item {
+    display: flex;
+    padding: 5px 10px;
+    margin-top: 10px;
+}
