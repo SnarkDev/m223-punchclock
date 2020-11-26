@@ -1,18 +1,61 @@
 <!DOCTYPE html>
-<html >
-<head>
-<script src="assets/js/loginScript.js" type="application/javascript"></script>
-<link rel="stylesheet" type="text/css" href="assets/css/loginStyle.css"/>
-</head>
-<body>
-<div class="login">
-    <form class="loginClass">
-        <h2 class="form-item">Please login</h2>
-        <input id="username" type="text" class="form-item" name="username" placeholder="Username" required="" autofocus=""/>
-        <input id="password" type="password" class="form-item" name="password" placeholder="Password" required=""/>
-        <button id="loginBtn" type="submit">Login</button>
-    </form>
-</div>
-</body>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport"
+              content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Punchclock Client</title>
+        <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+        <script src="assets/js/script.js" type="application/javascript"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    </head>
+    <body>
+        <form id="createEntryForm">
+            <label for="checkIn">Check in</label>
+            <input type="date" name="checkInDate" id="checkIn" required>
+            <input id="checkInTime" type="time" name="checkInTime" required>
+            <label for="checkOut">Check out</label>
+            <input type="date" name="checkOutDate" id="checkOut" required>
+            <input id="checkOutTime" type="time" name="checkOutTime" required>
+            <label for="category">Category</label>
+            <select name="categoryName" id="category"/>
+            <input type="submit" value="Save" />
+        </form>
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Check in</th>
+                    <th>Check out</th>
+                </tr>
+            </thead>
+            <tbody id="entryDisplay">
+                <tr>
+                    <td colspan="3">Loading...</td>
+                </tr>
+            </tbody>
+        </table>
+        <br>
+        <br>
+        <form id="createCategoryForm">
+            <label for="CategoryName">Category</label>
+            <input type="text" name="Category" id="CategoryName" required>
+            <input type="submit" value="Save" />
+        </form>
+        <table>
+            <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Delete</th>
+            </tr>
+            </thead>
+            <tbody id="categoryDisplay">
+            <tr>
+                <td colspan="3">Loading...</td>
+            </tr>
+            </tbody>
+        </table>
+    </body>
 </html>
-
