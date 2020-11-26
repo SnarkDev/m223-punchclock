@@ -4,7 +4,10 @@ import ch.zli.m223.punchclock.domain.Entry;
 import ch.zli.m223.punchclock.repository.EntryRepository;
 import org.springframework.stereotype.Service;
 
+import java.time.LocalDateTime;
 import java.util.List;
+import java.util.Optional;
+import java.util.OptionalInt;
 
 @Service
 public class EntryService {
@@ -24,5 +27,20 @@ public class EntryService {
 
     public void deleteEntry(Long id){
         entryRepository.deleteById(id);
+    }
+
+    public void editEntry(Long id, LocalDateTime checkIn, LocalDateTime checkOut)
+    {
+        Optional<Entry> findEntry= entryRepository.findById(id);
+        if(findEntry.isPresent())
+        {
+            Entry currentEntry = findEntry.get();
+            currentEntry.setCheckIn(checkIn);
+            currentEntry.setCheckOut(checkOut);
+            entryRepository.save(currentEntry);
+        }else
+        {
+            throw new NullPointerException("This entry does not exist!");
+        }
     }
 }
