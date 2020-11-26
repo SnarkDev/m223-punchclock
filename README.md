@@ -3,6 +3,7 @@
 ## Starten
 Um die Applikation zu Starten muss man in einem Browser die URL (localhost:8081) aufrufen und die Applikation im Intelij starten,
 im Moment wird man so direkt zur Entry-Verwaltung weitergeleitet.
+WICHTIG!! Um das Projekt zu starten muss man gradle installiert sein.
 
 ## Entries
 Mit dem Programm kann man Entries verwalten, diese können erstellt werden und werden mit einer Unique Id versehen.
