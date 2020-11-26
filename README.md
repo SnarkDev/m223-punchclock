@@ -1,6 +1,6 @@
 # M223: Punchclock
 
-##Starten
+## Starten
 Um die Applikation zu Starten muss man in einem Browser die URL (localhost:8081) aufrufen und die Applikation im Intelij starten,
 im Moment wird man so direkt zur Entry-Verwaltung weitergeleitet.
 
